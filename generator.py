@@ -1,7 +1,7 @@
 import random
 import re
 
-working_directory = "ChroniclesOfNarnia"
+working_directory = "DasKapital"
 
 input_text = open("data/" + working_directory + ".txt", "r").read().replace("\n", "").replace("#", "")
 
@@ -13,5 +13,5 @@ random.shuffle(sentences)
 
 f = open("output/" + working_directory + ".txt", "a")
 for sentence in sentences:
-    f.write(sentence + " ")
+    f.write(sentence.replace("- ", "") + " ")
 f.close()
